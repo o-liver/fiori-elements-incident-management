@@ -14,7 +14,9 @@
   },
   "scripts": {
     "start": "npx cds run",
-    "watch": "npx cds watch"
+    "watch": "npx cds watch",
+    "postinstall": "cd app/incidents && npm i",
+    "test": "cd app/incidents && npm run test"
   },
   "cds": {
     "requires": {
