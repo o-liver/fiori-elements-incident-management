@@ -1,6 +1,10 @@
 ---
 general:
   buildTool: "npm"
+  jenkinsKubernetes:
+    securityContext:
+      runAsUser: 0
+      fsGroup: 0
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
