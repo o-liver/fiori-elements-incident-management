@@ -1,0 +1,24 @@
+---
+general:
+  buildTool: "npm"
+stages:
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Additional Unit Tests:
+    npmExecuteScripts: true
+    karmaExecuteTests: false
+  Acceptance:
+    cloudFoundryDeploy: false
+    uiVeri5ExecuteTests: false
+  Release:
+    cloudFoundryDeploy: false
+    tmsUpload: false
+steps:
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
+  npmExecuteScripts:
+    runScripts:
+    - "test"
+  cloudFoundryDeploy:
+    mtaDeployParameters: "-f --version-rule ALL"
