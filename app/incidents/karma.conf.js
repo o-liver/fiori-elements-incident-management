@@ -2,7 +2,6 @@ module.exports = function (config) {
     config.set({
       frameworks: ["ui5"],
       ui5: {
-        url: 'https://sapui5.hana.ondemand.com'
       },
       
       browsers: ["ChromeCustomHeadless"],
@@ -13,7 +12,7 @@ module.exports = function (config) {
         },
         ChromeCustomHeadless: {
           base: 'ChromeHeadless',
-          flags: ['--no-sandbox=true --window-size=1600,900']
+          flags: ['--no-sandbox', '--disable-dev-shm-usage', '--window-size=1600,900']
         }
       },
   
