@@ -12,7 +12,7 @@ module.exports = function (config) {
         },
         ChromeCustomHeadless: {
           base: 'ChromeHeadless',
-          flags: ['--no-sandbox', '--disable-dev-shm-usage', '--window-size=1600,900']
+          flags: ['--no-sandbox', '--window-size=1600,900']
         }
       },
   
